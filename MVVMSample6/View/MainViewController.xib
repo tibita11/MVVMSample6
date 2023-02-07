@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MVVMSample6" customModuleProvider="target">
+            <connections>
+                <outlet property="registerdLabel" destination="Cb4-yp-Pg8" id="v2E-hf-lJH"/>
+                <outlet property="registrationButton" destination="aPk-of-HBD" id="clK-is-VQx"/>
+                <outlet property="resetButton" destination="QSa-m1-uKQ" id="taL-bz-Tdk"/>
+                <outlet property="titleTextField" destination="djz-YD-08e" id="fvD-xB-0D1"/>
+                <outlet property="validationLabel" destination="DDe-Gy-iQE" id="sHk-nY-Q4K"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dok-i8-60j">
+                    <rect key="frame" x="50" y="89" width="293" height="350"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="tk6-1h-efB">
+                            <rect key="frame" x="0.0" y="0.0" width="293" height="113.33333333333333"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djz-YD-08e">
+                                    <rect key="frame" x="0.0" y="0.0" width="293" height="31.666666666666668"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バリデーションチェック" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDe-Gy-iQE">
+                                    <rect key="frame" x="0.0" y="81.666666666666657" width="293" height="31.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="djz-YD-08e" firstAttribute="top" secondItem="tk6-1h-efB" secondAttribute="top" id="CfM-v6-I0b"/>
+                                <constraint firstAttribute="trailing" secondItem="DDe-Gy-iQE" secondAttribute="trailing" id="PUq-AX-Tdf"/>
+                                <constraint firstAttribute="trailing" secondItem="djz-YD-08e" secondAttribute="trailing" id="WNE-xT-j2c"/>
+                                <constraint firstItem="DDe-Gy-iQE" firstAttribute="leading" secondItem="tk6-1h-efB" secondAttribute="leading" id="iiS-Bp-60J"/>
+                                <constraint firstAttribute="bottom" secondItem="DDe-Gy-iQE" secondAttribute="bottom" id="lmL-Kk-Kh9"/>
+                                <constraint firstItem="djz-YD-08e" firstAttribute="leading" secondItem="tk6-1h-efB" secondAttribute="leading" id="qxH-oq-uw6"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録してね！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb4-yp-Pg8">
+                            <rect key="frame" x="0.0" y="118.33333333333334" width="293" height="113.33333333333334"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="26p-R7-yIw">
+                            <rect key="frame" x="28.333333333333329" y="236.66666666666671" width="236.66666666666669" height="113.33333333333334"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPk-of-HBD">
+                                    <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="113.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="登録"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSa-m1-uKQ">
+                                    <rect key="frame" x="143.33333333333331" y="0.0" width="93.333333333333314" height="113.33333333333333"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="リセット"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Cb4-yp-Pg8" firstAttribute="leading" secondItem="Dok-i8-60j" secondAttribute="leading" id="45m-cN-khN"/>
+                        <constraint firstAttribute="trailing" secondItem="Cb4-yp-Pg8" secondAttribute="trailing" id="9Yz-Xg-uyb"/>
+                        <constraint firstAttribute="height" constant="350" id="IWa-Tg-68z"/>
+                        <constraint firstItem="tk6-1h-efB" firstAttribute="top" secondItem="Dok-i8-60j" secondAttribute="top" id="Y4t-7k-sKy"/>
+                        <constraint firstAttribute="trailing" secondItem="tk6-1h-efB" secondAttribute="trailing" id="fou-j0-SgA"/>
+                        <constraint firstItem="tk6-1h-efB" firstAttribute="leading" secondItem="Dok-i8-60j" secondAttribute="leading" id="mJv-Me-HYC"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Dok-i8-60j" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="5ZK-ry-bbx"/>
+                <constraint firstItem="Dok-i8-60j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="6f8-eo-VCI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dok-i8-60j" secondAttribute="trailing" constant="50" id="HnW-ec-YFs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
